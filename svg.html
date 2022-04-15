@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Increase SVG size dynamically</h1>
+
+    <input
+      type="number"
+      id="input1"
+      name="height"
+      onkeyup="increaseSVGSize()"
+    /><br /><br />
+    <div>
+      <svg
+        id="mySvg"
+        width="1370"
+        height="1170"
+        style="background-color: #cccccc"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="10%"
+          y="10%"
+          width="80%"
+          height="80%"
+          style="fill: blue; stroke-width: 5; stroke: black"
+        />
+      </svg>
+    </div>
+
+    <script>
+      function increaseSVGSize() {
+        document.getElementById("mySvg").style.height =
+          document.getElementById("input1").value;
+      }
+    </script>
+  </body>
+</html>
